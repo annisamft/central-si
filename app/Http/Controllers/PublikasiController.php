@@ -90,6 +90,8 @@ class PublikasiController extends Controller
 		}
 		public function show(Publikasi $publikasi)
     {
+			echo "a";
+			die();	
 		return view('backend.publikasi.show', compact('publikasi'));
 		}
 }
