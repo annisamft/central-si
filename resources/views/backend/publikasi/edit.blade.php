@@ -18,7 +18,7 @@
         <div class="col-md-12">
             <div class="card">
 
-                {{ Form::model($publikasi, ['route' => ['admin.publikasi.update', $publikasi->id], 'method' => 'patch']) }}
+                {{ Form::model($publikasi, ['route' => ['admin.publikasi.update', $publikasi->id], 'method' => 'patch', 'files' =>'true']) }}
 
                 {{--CARD HEADER --}}
                 <div class="card-header">
