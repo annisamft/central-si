@@ -48,7 +48,7 @@
                         <tbody>
                         @forelse($publikasis as $publikasi)
                             <tr>
-                                <td class="text-center">{{ $publikasi->tahun }}</td>
+                                <td class="text-center">{{ $publikasi->id }}</td>
                                 <td>{{ $publikasi->judul }}</td>
                                 <td class="text-center">{{$publikasi->anggotas->count()}}</td>
                                 <td class="text-center">

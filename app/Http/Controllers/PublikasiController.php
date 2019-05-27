@@ -40,6 +40,7 @@ class PublikasiController extends Controller
     	{
     		$filename = uniqid('Artikel-');
     		$fileext = $request->file('file_artikel')->extension();
+<<<<<<< HEAD
 				$filenameext = $filename.'.'.$fileext;
 				$file_artikel = $request->file_artikel->storeAs('public/file_artikel', $filenameext);
     	//	$filepath = $request->file_artikel->storeAs('publikasi_artikel', $filenameext);
@@ -56,6 +57,21 @@ class PublikasiController extends Controller
     		//$publikasi->publisher = $filepath;
     	}
     	$publikasi->save();
+=======
+    		$filenameext = $filename.'.'.$fileext;
+    		$filepath = $request->file_artikel->storeAs('publikasi_artikel', $filenameext);
+    		$publikasi->file_artikel = $filepath;
+    	}
+    	if($request->file('publisher')->isValid())
+    	{
+    		$filename = uniqid('Publisher-');
+    		$fileext = $request->file('publisher')->extension();
+    		$filenameext = $filename.'.'.$fileext;
+    		$filepath = $request->publisher->storeAs('publikasi_publisher', $filenameext);
+    		$publikasi->publisher = $filepath;
+    	}
+    	$publikasi->save(s);
+>>>>>>> master
     	return redirect()->route('admin.publikasi.index', [$publikasi]);
     }
     public function edit(Publikasi $publikasi)

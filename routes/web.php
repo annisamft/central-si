@@ -54,7 +54,11 @@ Route::middleware(['auth'])->group( function(){
     Route::get('/admin/anggotapublikasi/{id}/add', 'AnggotaController@create')->name('admin.anggotapublikasi.create'); 
     Route::get('/admin/anggotapublikasi/{id}', 'AnggotaController@index')->name('admin.anggotapublikasi.index'); 
     Route::post('/admin/anggotapublikasi', 'AnggotaController@store')->name('admin.anggotapublikasi.store'); 
+<<<<<<< HEAD
     Route::delete('/admin/anggotapublikasi/{Anggota}', 'AnggotaController@destroy')->name('admin.anggotapublikasi.destroy'); 
+=======
+    Route::delete('/admin/anggotapublikasi/{id}', 'AnggotaController@destroy')->name('admin.anggotapublikasi.destroy'); 
+>>>>>>> master
 
     Route::get('pembimbing/submit', 'PembimbingSubmissionController@create')->name('admin.pembimbing.create');
     Route::post('pembimbing/submit', 'PembimbingSubmissionController@store')->name('admin.pembimbing.store');
