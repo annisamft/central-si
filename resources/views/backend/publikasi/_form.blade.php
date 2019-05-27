@@ -15,7 +15,7 @@
 
 <div class="form-group">
     <label for="jenis_publikasi">Jenis Publikasi</label>
-    {{Form::select('jenis_publikasi', [1=> 'Jurnal', 2=> 'Artikel', 3=> 'Karya Ilmiah'], null, ['class' => 'form-control']) }}
+    {{ Form::text('jenis_publikasi', null, ['class' => 'form-control', 'id' => 'jenis_publikasi', 'placeholder' => 'Jenis Publikasi']) }}
 </div>
 
 <div class="form-group">

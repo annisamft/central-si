@@ -36,10 +36,9 @@
                         </div>
                     </div>
 
-<<<<<<< HEAD
+
                     <input type="hidden" value={{$id}} id="id_p" name="id_p"></input>
-=======
->>>>>>> master
+
                     <table class="table table-striped">
                         <thead>
                         <tr>
@@ -52,15 +51,10 @@
                         <tbody>
                         @forelse($publikasis as $publikasi)
                             <tr>
-<<<<<<< HEAD
                                 <td class="text-center">{{ $publikasi->nama}}</td>
                                 <td class="text-center">{{ $publikasi->nip }}</td>
                                 <td class="text-center">@if($publikasi->posisi == 1)ketua @else  anggota @endif</td>
-=======
-                                <td class="text-center">{{ $publikasi->nama }}</td>
-                                <td class="text-center">{{ $publikasi->nip }}</td>
-                                <td class="text-center">{{ $publikasi->posisi }}</td>
->>>>>>> master
+
                                 <td class="text-center">
                                     {!! cui_btn_delete(route('admin.anggotapublikasi.destroy', [$publikasi->id]), "Anda yakin akan menghapus data publikasi ini?") !!}
 
